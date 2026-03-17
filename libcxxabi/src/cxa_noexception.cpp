@@ -52,6 +52,7 @@ __cxa_uncaught_exceptions() throw() { return 0; }
 } // extern "C"
 
 // provide dummy implementations for the 'no exceptions' case.
+struct _Unwind_Exception;
 uint64_t __getExceptionClass  (const _Unwind_Exception*)           { return 0; }
 void     __setExceptionClass  (      _Unwind_Exception*, uint64_t) {}
 bool     __isOurExceptionClass(const _Unwind_Exception*)           { return false; }
